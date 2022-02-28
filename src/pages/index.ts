@@ -1,5 +1,7 @@
 import Root from './root';
 
-export default {
+const export_pages = {
     Root
-};
+}
+
+export default export_pages;

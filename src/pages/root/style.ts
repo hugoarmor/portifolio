@@ -22,7 +22,7 @@ export const CenterView = styled.div`
  */
 export const HelloView = styled.div`
     width: 100%;
-    height: calc(100vh - 100px);
+    height: calc(100vh);
 `;
 
 export const HelloViewCenter = styled.div`
@@ -273,12 +273,13 @@ export const AboutInfoFooter = styled.div`
     margin: 0 auto;
     height: 100vh;
     color: #25291C;
+    /* display: flex; */
 `;
 
 export const ContactViewCenter = styled.div`
     width: 70%;
     margin: 0 auto;
-    height: 100%;
+    height: 90%;
     /* min-height: 1080px; */
     display: flex;
     flex-direction: column;
@@ -292,7 +293,18 @@ export const ContactViewTitle = styled.div`
     text-align: center;
 `;
 
+export const ContactViewFooter = styled.div`
+    width: 100%;
+    height: 100px;
+    background: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: #25291C;
+`;
+
 export const BoxTransparent = styled.div`
     width:100%;
-    height: 100px;
+    height: 10%;
 `;

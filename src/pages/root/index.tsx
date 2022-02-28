@@ -5,6 +5,7 @@ import { Header } from '../../components';
 import * as Di from 'react-icons/di';
 import * as Si from 'react-icons/si';
 import abilities from './data/abilities.json';
+import axios from 'axios';
 
 function Root() {
     /**
@@ -19,6 +20,17 @@ function Root() {
     /**
      * FUNCTIONS
      */
+    async function send_mail(text: string, mail:string) {
+        axios.post("https://api.emailjs.com/api/v1.0/email/send", {
+            service_id: "service_0irw149",
+            template_id: "template_pjj7gf8",
+            user_id: "Nx5wYdGgApHGW6wPf",
+            template_params: {
+                from_name: mail,
+                message: text
+            }
+        })
+    }
 
     useEffect(() => {
         setInterval(() => setTextIndex(index => index < (abilities.length - 1) ? index + 1 : 0), 3000);
@@ -87,12 +99,13 @@ function Root() {
                 <Styled.ContactView id="contact-view">
                     <Styled.ContactViewCenter>
                         <Styled.ContactViewTitle>Let's work together!</Styled.ContactViewTitle>
-                        <input style={{ width: "30%", border: "1px solid #a4aa96", borderTopLeftRadius: "5px", borderTopRightRadius: "5px", height: "40px", marginTop: "30px", outline: "none", borderBottom: "none" }} type="text" onChange={e => setMail(e.target.value)} placeholder="Type your email" />
-                        {/* <input style={{ width: "30%", border: "1px solid black", height: "70px", outline: "none" }} type="text" onChange={e => setMailMessage(e.target.value)} placeholder="Type your email" /> */}
-                        <textarea placeholder="Type your message..." style={{ width: "30%", border: "1px solid #a4aa96", height: "100px", outline: "none" }} onChange={e => setMailMessage(e.target.value)} rows={6} cols={50}>
-                        </textarea>
-                        <div style={{ width: "calc(30% + 4px)", height: "40px", cursor:"pointer", borderBottomLeftRadius:"5px", borderBottomRightRadius:"5px", background:"#25291C", fontSize:"20px", fontWeight:"bold", letterSpacing:"2px", color:"#ffffff", borderRadius: "unset", padding: "unset", border: "1px solid black", borderTop: "unset", display:"flex", alignItems:"center", justifyContent:"center" }} onClick={() => console.log(mailMessage)}>SUBMIT</div>
+                        <input style={{ width: "calc(30% - 38px)", backgroundSize: "20px", backgroundRepeat: "no-repeat", backgroundImage: `url(https://i.postimg.cc/cHR0Ctfq/email.png)`, backgroundPosition: "10px 12px", paddingLeft: "40px", border: "1px solid #a4aa96", borderTopLeftRadius: "5px", borderTopRightRadius: "5px", height: "40px", marginTop: "30px", outline: "none", borderBottom: "none" }} type="text" onChange={e => setMail(e.target.value)} placeholder="Type your email" />
+                        <textarea placeholder="Type your message..." style={{ width: "30%", border: "1px solid #a4aa96", height: "100px", outline: "none" }} onChange={e => setMailMessage(e.target.value)} rows={6} cols={50}></textarea>
+                        <div  onClick={async () => await send_mail(mailMessage, mail)} style={{ width: "calc(30% + 4px)", height: "40px", cursor: "pointer", borderBottomLeftRadius: "5px", borderBottomRightRadius: "5px", background: "#25291C", fontSize: "20px", fontWeight: "bold", letterSpacing: "2px", color: "#ffffff", borderRadius: "unset", padding: "unset", border: "1px solid black", borderTop: "unset", display: "flex", alignItems: "center", justifyContent: "center" }}>SUBMIT</div>
                     </Styled.ContactViewCenter>
+                    <Styled.ContactViewFooter>
+                        <Di.DiGithubBadge style={{ cursor: "pointer" }} onClick={() => window.open("https://github.com/hugoarmor", '_blank')} size="60px" />
+                    </Styled.ContactViewFooter>
                 </Styled.ContactView>
 
             </Styled.CenterView>

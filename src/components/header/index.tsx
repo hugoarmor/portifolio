@@ -11,7 +11,7 @@ interface Componentprops {
 function Header(props: Componentprops) {
 
     const NavbarElement = (propsNav: {element: string, href: string, onClick?: () => void}) => (
-        <Styled.NavbarElement onClick={propsNav.onClick} style={{color: props.colorView ? "#ffffff": "#25291C"}} href={propsNav.href}>{propsNav.element}</Styled.NavbarElement>
+        <Styled.NavbarElement onClick={propsNav.onClick} style={{color: props.colorView ? "#ffffff": "#25291C", transition:"all ease-in-out 2s"}} href={propsNav.href}>{propsNav.element}</Styled.NavbarElement>
     );
 
     return (

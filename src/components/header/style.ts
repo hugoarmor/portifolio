@@ -6,7 +6,6 @@ export const MainView = styled.div`
         color: #25291C;
         transition: color ease-in-out 1s;
     }
-    transition: color ease-in-out 1s;
     scroll-behavior: smooth;
     width: 70%;
     height: 100px;
@@ -47,6 +46,7 @@ export const NavbarElement = styled.a`
     padding: 25px 2% 0 2%;
     font-size: calc(20px);
     font-weight: bold;
+    transition: color ease-in-out 1s;
 
     :after {
         transition: all ease-in-out .2s;
