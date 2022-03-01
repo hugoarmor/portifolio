@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import TextTransition, { presets } from "react-text-transition";
 import * as Styled from './style';
 import { Header } from '../../components';
