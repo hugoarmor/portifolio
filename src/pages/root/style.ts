@@ -21,21 +21,30 @@ export const CenterView = styled.div`
  * Here are the styling of the HELLO VIEW
  */
 export const HelloView = styled.div`
+    @media (max-width: 700px) {
+        height: calc(100vh - 100px);
+    }
     width: 100%;
     height: calc(100vh);
 `;
 
 export const HelloViewCenter = styled.div`
+    @media (max-width: 700px) {
+        height: calc(100vh - 100px);
+        width: 100%;
+    }
     width: 70%;
     margin: 0 auto;
     height: 100%;
-    /* background: green; */
     display: flex;
     flex-direction: column;
     align-items: center;
 `;
 
 export const HelloAbilities = styled.div`
+    @media (max-width: 700px) {
+        margin-bottom: 20px;
+    }
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -44,6 +53,9 @@ export const HelloAbilities = styled.div`
 `;
 
 export const HelloAbilitiesText = styled.div`
+    @media (max-width: 700px) {
+        font-size: 15px;
+    }
     @keyframes transitate {
         from { 
             opacity: 0;
@@ -54,6 +66,28 @@ export const HelloAbilitiesText = styled.div`
             font-weight: bold;
         }
     }
+    opacity: 1;
+    font-size: 20px;
+    font-weight: bold;
+    animation: 2.5s transitate;
+`;
+
+export const HelloAbilitiesText2 = styled.div`
+    @media (max-width: 700px) {
+        font-size: 15px;
+        width: 200px;
+    }
+    @keyframes transitate {
+        from { 
+            opacity: 0;
+            font-weight: bold;
+        }
+        to {
+            opacity: 1;
+            font-weight: bold;
+        }
+    }
+    width: 290px;
     opacity: 1;
     font-size: 20px;
     font-weight: bold;
@@ -73,6 +107,9 @@ export const HelloInfo = styled.div`
 `;
 
 export const HelloInfoTitle = styled.div`
+    @media (max-width: 700px) {
+        font-size: 15px;
+    }
     @keyframes transitate {
         from { 
             opacity: 0;
@@ -92,6 +129,9 @@ export const HelloInfoTitle = styled.div`
 `;
 
 export const HelloInfoText = styled.div`
+    @media (max-width: 700px) {
+        font-size: 35px;
+    }
     @keyframes transitate {
         from { 
             opacity: 0;
@@ -142,6 +182,11 @@ export const AboutView = styled.div`
 `;
 
 export const AboutViewCenter = styled.div`
+    @media (max-width: 700px) {
+        width: 90%;
+        flex-direction: column;
+        justify-content: center;
+    }
     width: 70%;
     margin: 0 auto;
     height: 100%;
@@ -152,6 +197,11 @@ export const AboutViewCenter = styled.div`
 `;
 
 export const AboutAbilities = styled.div`
+    @media (max-width: 700px) {
+        width: 100%;
+        margin-right: 8%;
+        margin-top: 80px;
+    }
     width: 50%;
     min-width: 240px;
     height: 40%;
@@ -193,6 +243,11 @@ export const AboutAbilitiesSkills = styled.div`
 `;
 
 export const AboutInfo = styled.div`
+    @media (max-width: 700px) {
+        width: 100%;
+        font-size: 23px;
+        height: 30%;
+    }
     width: 50%;
     min-width: 240px;
     height: 40%;
@@ -226,6 +281,9 @@ export const AboutInfoTitle = styled.div`
 `;
 
 export const AboutInfoText = styled.div`
+    @media (max-width: 700px) {
+        font-size: 23px;
+    }
     @keyframes transitate {
         from { 
             opacity: 0;
@@ -277,6 +335,9 @@ export const AboutInfoFooter = styled.div`
 `;
 
 export const ContactViewCenter = styled.div`
+    @media (max-width: 700px) {
+        width: 100%;
+    }
     width: 70%;
     margin: 0 auto;
     height: 90%;

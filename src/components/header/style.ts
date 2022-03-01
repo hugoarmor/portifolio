@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 
 export const MainView = styled.div`
+    @media (max-width: 700px) {
+        flex-direction: column;
+        width: 100%;
+        position: unset;
+    }
     a {
         text-decoration: none;
         color: #25291C;
@@ -9,7 +14,6 @@ export const MainView = styled.div`
     scroll-behavior: smooth;
     width: 70%;
     height: 100px;
-    /* background: red; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -18,6 +22,10 @@ export const MainView = styled.div`
 `
 
 export const TextHugo = styled.a`
+    @media (max-width: 700px) {
+        font-size: 25px;
+        margin-top: 20px;
+    }
     height: 100%;
     /* background: blue; */
     display: flex;
@@ -36,6 +44,9 @@ export const NavbarElements = styled.div`
 `
 
 export const NavbarElement = styled.a`
+    @media (max-width: 700px) {
+        font-size: 15px;
+    }
     width: 100px;
     height: 40%;
     /* background: yellow; */
