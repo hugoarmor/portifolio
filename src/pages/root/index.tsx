@@ -11,7 +11,6 @@ function Root() {
     /**
      * VARIABLES
      */
-    const ref = useRef(<div></div>);
     const [textIndex, setTextIndex] = useState<number>(0);
     const [colorView, setColorView] = useState<boolean>(false);
     const [mail, setMail] = useState<string>("");
