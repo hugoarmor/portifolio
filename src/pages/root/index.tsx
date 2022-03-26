@@ -6,6 +6,7 @@ import * as Di from 'react-icons/di';
 import * as Si from 'react-icons/si';
 import abilities from './data/abilities.json';
 import axios from 'axios';
+import ImageHugo from '../../assets/images/hugo.jpg';
 
 function Root() {
     /**
@@ -38,7 +39,7 @@ function Root() {
     }, [])
 
     useEffect(() => {
-        if(width && width > 700) {
+        if (width && width > 700 && false) {
             document.body.style.overflow = "hidden";
         }
         else {

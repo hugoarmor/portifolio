@@ -1,11 +1,12 @@
 import styled from 'styled-components';
+import ImageHugo from '../../assets/images/hugo.jpg';
 
 export const MainView = styled.div`
 
     width: 100%;
     scroll-behavior: smooth;
     /* height: 100vh; */
-    background: #F2F5EC;
+    background: #fff;
     color: #25291C;
 `;
 
@@ -23,9 +24,18 @@ export const CenterView = styled.div`
 export const HelloView = styled.div`
     @media (max-width: 700px) {
         height: calc(100vh - 100px);
+        background-image: unset;
+    }
+    @media (max-width: 900px) {
+        background-image: unset;
     }
     width: 100%;
     height: calc(100vh);
+    background-image: url(${ImageHugo});
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
+    background-size: calc(20% + 330px);
 `;
 
 export const HelloViewCenter = styled.div`
@@ -77,6 +87,9 @@ export const HelloAbilitiesText2 = styled.div`
         font-size: 15px;
         width: 200px;
     }
+    @media (max-width: 1400px) and (min-width: 900px) {
+        color: #fff;
+    }
     @keyframes transitate {
         from { 
             opacity: 0;
@@ -95,6 +108,10 @@ export const HelloAbilitiesText2 = styled.div`
 `;
 
 export const HelloInfo = styled.div`
+    @media (max-width: 900px) {
+        font-size: 15px;
+        margin-right: unset;
+    }
     width: 50%;
     display: flex;
     align-items: center;
@@ -103,6 +120,7 @@ export const HelloInfo = styled.div`
     /* background: red; */
     font-size: 20px;
     font-weight: bold;
+    margin-right: auto;
     margin-top: auto;
 `;
 
@@ -293,7 +311,7 @@ export const AboutInfoText = styled.div`
             font-weight: bold;
         }
     }
-    color: #ff;
+    color: #fff;
     text-align: left;
     font-size: 43px;
     opacity: 1;
@@ -312,7 +330,7 @@ export const AboutInfoFooter = styled.div`
             font-weight: bold;
         }
     }
-    color: #ff;
+    color: #fff;
     text-align: left;
     font-size: 20px;
     opacity: 1;
@@ -326,7 +344,7 @@ export const AboutInfoFooter = styled.div`
  * 
  * Here are the styling of the HELLO VIEW
  */
- export const ContactView = styled.div`
+export const ContactView = styled.div`
     width: 100%;
     margin: 0 auto;
     height: 100vh;
