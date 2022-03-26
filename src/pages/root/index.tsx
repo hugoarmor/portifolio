@@ -6,7 +6,6 @@ import * as Di from 'react-icons/di';
 import * as Si from 'react-icons/si';
 import abilities from './data/abilities.json';
 import axios from 'axios';
-import ImageHugo from '../../assets/images/hugo.jpg';
 
 function Root() {
     /**
