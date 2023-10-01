@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import TextTransition, { presets } from "react-text-transition";
-import * as Styled from './style';
+import * as S from './style';
 import { Header } from '../../components';
 import * as Di from 'react-icons/di';
 import * as Si from 'react-icons/si';
@@ -47,51 +47,51 @@ function Root() {
     }, [width])
 
     return (
-        <Styled.MainView ref={e => setWidth(e?.offsetWidth)}>
+        <S.MainView ref={e => setWidth(e?.offsetWidth)}>
             <div style={{ width: "70%", margin: "0 auto" }}>
                 <Header colorView={colorView} setColorView={setColorView} />
             </div>
-            <Styled.CenterView id="hello-view">
-                <Styled.BoxTransparent />
+            <S.CenterView id="hello-view">
+                <S.BoxTransparent />
 
-                <Styled.HelloView>
-                    <Styled.HelloViewCenter>
-                        <Styled.HelloInfo>
-                            <Styled.HelloInfoTitle>Hello, i'm Hugo Moreira!</Styled.HelloInfoTitle>
-                            <Styled.HelloInfoText>Creating digital solutions, brandings, experience and more...</Styled.HelloInfoText>
-                            <Styled.HelloInfoFooter>Multi-task developer for multi-task demands</Styled.HelloInfoFooter>
-                        </Styled.HelloInfo>
+                <S.HelloView>
+                    <S.HelloViewCenter>
+                        <S.HelloInfo>
+                            <S.HelloInfoTitle>Hello, I'm Hugo Moreira!</S.HelloInfoTitle>
+                            <S.HelloInfoText>Creating digital solutions, brandings, experience and more...</S.HelloInfoText>
+                            <S.HelloInfoFooter>Multi-task developer for multi-task demands</S.HelloInfoFooter>
+                        </S.HelloInfo>
 
-                        <Styled.HelloAbilities>
-                            <Styled.HelloAbilitiesText>HUGO MOREIRA</Styled.HelloAbilitiesText>
+                        <S.HelloAbilities>
+                            <S.HelloAbilitiesText>HUGO MOREIRA</S.HelloAbilitiesText>
                             <Di.DiCode size={"5vw"} />
-                            <Styled.HelloAbilitiesText2>
+                            <S.HelloAbilitiesText2>
                                 <TextTransition
                                     text={abilities[textIndex % abilities.length]}
                                     springConfig={presets.wobbly}
                                 />
-                            </Styled.HelloAbilitiesText2>
-                        </Styled.HelloAbilities>
-                    </Styled.HelloViewCenter>
-                </Styled.HelloView>
+                            </S.HelloAbilitiesText2>
+                        </S.HelloAbilities>
+                    </S.HelloViewCenter>
+                </S.HelloView>
 
-                <Styled.AboutView id="about-view" style={{ height: "100vh" }}>
-                    <Styled.AboutViewCenter>
-                        <Styled.AboutInfo>
-                            <Styled.AboutInfoTitle>ABOUT ME</Styled.AboutInfoTitle>
-                            <Styled.AboutInfoText>I'm a fullstack developer, focusing on web development based on modern UI's and applications, working with REST API's and different databases.</Styled.AboutInfoText>
-                            <Styled.AboutInfoFooter>Most used: ReactJS, Typescript, Nodejs, MSSQL and Postgres.</Styled.AboutInfoFooter>
-                        </Styled.AboutInfo>
+                <S.AboutView id="about-view" style={{ height: "100vh" }}>
+                    <S.AboutViewCenter>
+                        <S.AboutInfo>
+                            <S.AboutInfoTitle>ABOUT ME</S.AboutInfoTitle>
+                            <S.AboutInfoText>I'm a fullstack developer, focusing on web development based on modern UI's and applications, working with REST API's and different databases.</S.AboutInfoText>
+                            <S.AboutInfoFooter>Most used: ReactJS, Typescript, Nodejs, MSSQL and Postgres.</S.AboutInfoFooter>
+                        </S.AboutInfo>
 
-                        <Styled.AboutAbilities>
-                            <Styled.AboutAbilitiesTitle>SKILLS</Styled.AboutAbilitiesTitle>
-                            <Styled.AboutAbilitiesSkills>
+                        <S.AboutAbilities>
+                            <S.AboutAbilitiesTitle>SKILLS</S.AboutAbilitiesTitle>
+                            <S.AboutAbilitiesSkills>
                                 <Di.DiHtml5 size="80px" style={{ marginBottom: "20px" }} />
                                 <Di.DiCss3 size="80px" style={{ marginBottom: "20px" }} />
                                 <Si.SiJavascript size="60px" style={{ marginBottom: "20px", marginRight: "10px" }} />
                                 <Si.SiTypescript size="60px" style={{ marginBottom: "20px" }} />
                                 <Di.DiNodejsSmall size="80px" style={{ marginBottom: "20px" }} />
-                                <Si.SiTsnode size="60px" style={{ marginBottom: "20px" }} />
+                                <Si.SiRubyonrails size="60px" style={{ marginBottom: "20px" }} />
                                 <Si.SiMicrosoftsqlserver size="60px" style={{ marginBottom: "20px" }} />
                                 <Si.SiPostgresql size="60px" style={{ marginBottom: "20px" }} />
                                 <Di.DiStreamline size="80px" style={{ marginBottom: "20px" }} />
@@ -100,25 +100,25 @@ function Root() {
                                 <Di.DiGithubBadge size="80px" style={{ marginBottom: "20px" }} />
                                 <Di.DiReact size="80px" style={{ marginBottom: "20px" }} />
                                 <Di.DiLinux size="60px" style={{ marginBottom: "20px" }} />
-                            </Styled.AboutAbilitiesSkills>
-                        </Styled.AboutAbilities>
-                    </Styled.AboutViewCenter>
-                </Styled.AboutView>
+                            </S.AboutAbilitiesSkills>
+                        </S.AboutAbilities>
+                    </S.AboutViewCenter>
+                </S.AboutView>
 
-                <Styled.ContactView id="contact-view">
-                    <Styled.ContactViewCenter>
-                        <Styled.ContactViewTitle>Let's work together!</Styled.ContactViewTitle>
+                <S.ContactView id="contact-view">
+                    <S.ContactViewCenter>
+                        <S.ContactViewTitle>Let's work together!</S.ContactViewTitle>
                         <input style={{ width: "calc(60% - 38px)", maxWidth: "calc(430px - 38px)", backgroundSize: "20px", backgroundRepeat: "no-repeat", backgroundImage: `url(https://i.postimg.cc/cHR0Ctfq/email.png)`, backgroundPosition: "10px 12px", paddingLeft: "40px", border: "1px solid #a4aa96", borderTopLeftRadius: "5px", borderTopRightRadius: "5px", height: "40px", marginTop: "30px", outline: "none", borderBottom: "none" }} type="text" onChange={e => setMail(e.target.value)} placeholder="Type your email" />
                         <textarea placeholder="Type your message..." style={{ width: "60%", maxWidth: "430px", border: "1px solid #a4aa96", height: "100px", outline: "none" }} onChange={e => setMailMessage(e.target.value)} rows={6} cols={50}></textarea>
                         <div onClick={async () => await send_mail(mailMessage, mail)} style={{ width: "calc(60% + 4px)", maxWidth: "calc(430px + 4px)", height: "40px", cursor: "pointer", borderBottomLeftRadius: "5px", borderBottomRightRadius: "5px", background: "#25291C", fontSize: "20px", fontWeight: "bold", letterSpacing: "2px", color: "#ffffff", borderRadius: "unset", padding: "unset", border: "1px solid black", borderTop: "unset", display: "flex", alignItems: "center", justifyContent: "center" }}>SUBMIT</div>
-                    </Styled.ContactViewCenter>
-                    <Styled.ContactViewFooter>
+                    </S.ContactViewCenter>
+                    <S.ContactViewFooter>
                         <Di.DiGithubBadge style={{ cursor: "pointer" }} onClick={() => window.open("https://github.com/hugoarmor", '_blank')} size="60px" />
-                    </Styled.ContactViewFooter>
-                </Styled.ContactView>
+                    </S.ContactViewFooter>
+                </S.ContactView>
 
-            </Styled.CenterView>
-        </Styled.MainView>
+            </S.CenterView>
+        </S.MainView>
     )
 }
 
