@@ -1,19 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import * as Styled from './style';
 
-
-
-interface Componentprops {
+interface Props {
     colorView: boolean,
     setColorView: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-function Header(props: Componentprops) {
+function Header(props: Props) {
     const [scroll, setScroll] = useState(false)
 
     useEffect(() => {
         document.addEventListener("scroll", () => {
-            console.log(`${window.screen.height} - ${window.scrollY}`)
             if (window.scrollY < 460) {
               setScroll(false)
             } else if (window.scrollY > 460 && window.scrollY < 1420) {
