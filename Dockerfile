@@ -1,4 +1,4 @@
-FROM node:lts-alpine3.18
+FROM node:alpine
 
 WORKDIR /app
 
@@ -9,7 +9,8 @@ RUN yarn
 COPY . .
 
 RUN yarn build
+RUN yarn global add serve
 
 EXPOSE 3000
 
-CMD ["yarn", "start"]
+CMD ["npx", "serve", "-s", "build"]
